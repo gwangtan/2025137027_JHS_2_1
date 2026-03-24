@@ -1,47 +1,28 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
-public class PlayerMovementWithTurn : MonoBehaviour
+public class EnemyDot : MonoBehaviour
 {
-    [Header("Move")]
-    public float moveSpeed = 5f;
-
-    Vector3 moveInput;
-    public void OnMove(InputValue value)
-    {
-        Vector2 input = value.Get<Vector2>();
-        moveInput = new Vector3(input.x, 0, input.y);
-    }
+    public Transform player;
+    float viewAngle = 60f;
 
     private void Update()
     {
-        if (GetMagnitudeVector3(moveInput) > 0)
+        Vector3 toPlayer = player.position - transform.position;
+        Vector3 forward = transform.forward;
+
+        forward.Normalize();
+        toPlayer.Normalize();
+
+        float dot = Vector3.Dot(forward, toPlayer);
+        float angle = Mathf.Acos(dot) * Mathf.Rad2Deg;
+
+        if (angle < viewAngle / 2 && toPlayer.magnitude < 4f)
         {
-            //transform.Translate(GetNormalizedVector3(moveInput) * moveSpeed * Time.deltaTime);
-            transform.position += (GetNormalizedVector3(moveInput) * moveSpeed * Time.deltaTime);
-            LookAtDirection(moveInput);
-        }
-    }
-
-    void LookAtDirection(Vector3 direction)
-    {
-        float angle = Mathf.Atan2(direction.z, direction.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0, angle, 0);
-    }
-
-    public Vector3 GetNormalizedVector3(Vector3 vector)
-    {
-        float magnitude = GetMagnitudeVector3(vector);
-
-        if (magnitude > 0)
-        {
-            return vector / magnitude;
+            transform.localScale = Vector3.one * 2f;
         }
         else
         {
-            return Vector3.zero;
+            transform.localScale = Vector3.one;
         }
     }
-    float GetMagnitudeVector3(Vector3 vector) => Mathf.Sqrt((vector.x * vector.x) + (vector.y * vector.y) + (vector.z * vector.z));
-
 }
