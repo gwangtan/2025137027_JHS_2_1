@@ -1114,6 +1114,74 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "PLAY",
+            "id": "f8d2c134-17fd-4c6d-a7ee-ee9afc5e334a",
+            "actions": [
+                {
+                    "name": "Fire",
+                    "type": "Button",
+                    "id": "0360d30b-88e2-4563-b07a-4f6094d2eb1d",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "DropMine",
+                    "type": "Button",
+                    "id": "8530aa83-de4f-48ec-a034-5f437383ace4",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "TriggerEvent",
+                    "type": "Button",
+                    "id": "a81d7514-0be3-4923-82f3-166e052757ff",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "28d1485d-2e56-4cee-b3e6-f462e631eeae",
+                    "path": "<Keyboard>/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5a1899f2-c084-47c2-bd2c-c601682d9067",
+                    "path": "<Keyboard>/c",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DropMine",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e4e387c9-9f93-4008-ab28-976e128a78ac",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TriggerEvent",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [
