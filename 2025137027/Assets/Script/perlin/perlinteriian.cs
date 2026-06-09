@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SimplePerlinTerrain : MonoBehaviour
+public class SimplePerlinTerrain1 : MonoBehaviour
 {
     public int width = 30;
     public int depth = 30;

@@ -220,8 +220,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1416874677}
+  - component: {fileID: 1416874676}
   - component: {fileID: 1416874678}
-  - component: {fileID: 1416874679}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -229,6 +229,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1416874676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416874675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0057ad5c81fb9e449a7f44ef47aaaeb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PerlinTerrain
+  width: 30
+  depth: 30
+  scale: 0.1
+  heightMultiplier: 8
+  cubePrefab: {fileID: 2938147541567916193, guid: 47c06503e094ce7468b77e0354d88e01, type: 3}
+  XOffset: 10
+  ZOffset: 10
 --- !u!4 &1416874677
 Transform:
   m_ObjectHideFlags: 0
@@ -245,26 +264,6 @@ Transform:
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1416874678
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1416874675}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74814a59e3d59b043a48b21d9f06cd5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SimplePerlinTerrain
-  width: 30
-  depth: 30
-  scale: 0.1
-  heightMultiplier: 8
-  waterLevel: 3
-  grassPrefab: {fileID: 4792205098071387274, guid: 3703880bd38715b40a1d204b17bcfbab, type: 3}
-  dirtPrefab: {fileID: 443924987842348613, guid: ddb4ee792c70a7544a1d804e4134cd9a, type: 3}
-  waterPrefab: {fileID: 8532073859978088602, guid: b0e3cbcd0f875a74594fe6699f87dcbb, type: 3}
---- !u!114 &1416874679
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
